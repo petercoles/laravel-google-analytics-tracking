@@ -6,7 +6,7 @@ Other Google Analytics packages for Laravel are designed to consume analytics da
 
 Instead this does the ridiculously straightforward task of extracting your Google Analytics tracking ID from your Laravel .env file and injecting it into the a Blade view intended for inclusion in your base layout.
 
-The only wrinkle is that if you don't set the tracking ID in your .env file the Google script won't be included in your site, which can be marginally useful for development environments.
+The only wrinkle is that if you don't set the tracking ID in your .env file the Google script won't be included in your site. This is deliberate as it can be marginally useful for development and staging environments.
 
 ## Installation
 
@@ -16,7 +16,7 @@ Add the package to your project
 composer require petercoles/laravel-google-analytics-tracking
 ```
 
-Add the service provider to the providers entry in your config/app.php file
+Add the service provider to the providers list in your config/app.php file
 
 ```
 'providers' => [
@@ -30,9 +30,9 @@ Include the Blade view in your base layout
 ```
 @include('google-analytics::script')
 ```
-T
+Traditionally this was placed near the closing body tag. However as the script is now loaded asynchronously, it can be added anywhere where a script tag is legitimate.
 
-On your production server, set your tracking code to the .env file
+On your production server, set your tracking code in the .env file
 ```
 GOOGLE_ANALYTICS_TRACKING_ID=UA-XXXXXXXX-X
 ```
