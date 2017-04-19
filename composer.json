@@ -1,0 +1,27 @@
+{
+  "name": "petercoles/laravel-google-analytics-tracking",
+  "type": "library",
+  "description": "Inject your Google Analytics tracking ID into a Laravel project",
+  "keywords": ["Google Analytics", "Tracking ID", "Laravel"],
+  "homepage": "https://github.com/petercoles/laravel-google-analytics-tracking",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Peter Coles",
+      "email": "peterdcoles@gmail.com",
+      "homepage": "http://petercoles.com"
+    }
+  ],
+    "support": {
+        "issues": "https://github.com/petercoles/laravel-google-analytics-tracking/issues"
+    },
+  "require": {
+    "php": ">=5.6.0",
+    "laravel/framework": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "PeterColes\\LaravelGoogleAnalyticsTracking\\": "src/"
+    }
+  }
+}
